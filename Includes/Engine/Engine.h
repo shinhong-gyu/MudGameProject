@@ -1,6 +1,8 @@
 #pragma once
 #include "Core.h"
 #include "Math/Vector2.h"
+#include "Timer.h"
+
 
 class Level;
 class Actor;
@@ -44,6 +46,9 @@ public:
 
 	void SetTargetFrameRate(float targetFrameRate);
 
+	// 화면 크기 반환 함수
+	inline Vector2 ScreenSize() const { return screenSize; }
+
 	// 입력 관련 함수.
 	bool GetKey(int key);
 	bool GetKeyDown(int key);
@@ -57,7 +62,10 @@ public:
 
 	void SetCursorType(CursorType cursorType);
 
+	Level* GetLevel() { return mainLevel; }
 
+	void ClearInfoUI();
+	void ClearImage(int x ,int y);
 protected:
 	void ProcessInput();
 	void Update(float deltaTime); // Tick()
@@ -89,4 +97,9 @@ protected:
 
 	// 메인 레벨 변수.
 	Level* mainLevel;
+
+	// 화면 크기
+	Vector2 screenSize;
+
+	char* emptyStringBuffer = nullptr;
 };

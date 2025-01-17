@@ -1,6 +1,7 @@
 #include "PreCompiledHeader.h"
 #include "Level.h"
 #include "Actor/Actor.h"
+#include "../MudGame/Actor/Player.h"
 
 Level::Level()
 {

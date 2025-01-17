@@ -1,6 +1,7 @@
-#pragma once
+﻿#pragma once
 
 #include <iostream>
+#include <Windows.h>
 
 #if ENGINE_BUILD_DLL
 #define ENGINE_API __declspec(dllexport)
@@ -12,7 +13,25 @@
 #include <stdlib.h>
 #include <crtdbg.h>
 
-// �޸� ���� �Լ�.
+enum class Color : unsigned short
+{
+	Red = FOREGROUND_RED,
+	Blue = FOREGROUND_BLUE,
+	Green = FOREGROUND_GREEN,
+	Brown = Red + Green,
+	White = Red + Blue + Green,
+	Purple = Red + Blue,
+};
+
+inline void SetColor(Color color)
+{
+	SetConsoleTextAttribute(
+		GetStdHandle(STD_OUTPUT_HANDLE),
+		(int)color
+	);
+}
+
+// 메모리 삭제 함수.
 template<typename T>
 void SafeDelete(T* pointer)
 {
@@ -23,7 +42,7 @@ void SafeDelete(T* pointer)
 	}
 }
 
-// ����� �뵵.
+// 디버깅 용도.
 #ifdef _DEBUG
 #define new new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
 // Replace _NORMAL_BLOCK with _CLIENT_BLOCK if you want the
@@ -37,10 +56,9 @@ void Log(const char* format, T&&... args)
 {
 	char buffer[255];
 	snprintf(buffer, 255, format, args ...);
-	std::
-	
-	cout << buffer << "\n";
+	std::cout << buffer << "\n";
 }
+
 
 #define VK_LBUTTON        0x01
 #define VK_RBUTTON        0x02
@@ -125,3 +143,18 @@ void Log(const char* format, T&&... args)
 #define VK_RCONTROL       0xA3
 #define VK_LMENU          0xA4
 #define VK_RMENU          0xA5
+
+// 랜덤 함수 추가
+inline int Random(int min, int max)
+{
+	// 차이 구하기
+	int diff = max - min + 1;
+	return ((diff * rand()) / RAND_MAX + 1) + min;
+}
+
+// min~max 사이의 랜덤 값을 반환해주는 함수.
+inline float RandomPercent(float min, float max)
+{
+	float random = (float)(rand() / (float)RAND_MAX);
+	return random * (max - min) + min;
+}

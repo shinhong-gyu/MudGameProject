@@ -3,6 +3,7 @@
 #pragma warning (disable : 4251)
 
 #include <iostream>
+#include <vector>
 
 template <typename T>
 class List

@@ -5,11 +5,6 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcxproj", "{AF7846AD-5110-47CC-9967-627382DFCDA2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextScrollDemo", "TextScrollDemo\TextScrollDemo.vcxproj", "{7E3D5A6C-987D-4B9E-B87C-9EAB81926712}"
-	ProjectSection(ProjectDependencies) = postProject
-		{AF7846AD-5110-47CC-9967-627382DFCDA2} = {AF7846AD-5110-47CC-9967-627382DFCDA2}
-	EndProjectSection
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MudGame", "MudGame\MudGame.vcxproj", "{CD9D0B38-E530-4173-87A5-5E088535575A}"
 EndProject
 Global
@@ -28,14 +23,6 @@ Global
 		{AF7846AD-5110-47CC-9967-627382DFCDA2}.Release|x64.Build.0 = Release|x64
 		{AF7846AD-5110-47CC-9967-627382DFCDA2}.Release|x86.ActiveCfg = Release|Win32
 		{AF7846AD-5110-47CC-9967-627382DFCDA2}.Release|x86.Build.0 = Release|Win32
-		{7E3D5A6C-987D-4B9E-B87C-9EAB81926712}.Debug|x64.ActiveCfg = Debug|x64
-		{7E3D5A6C-987D-4B9E-B87C-9EAB81926712}.Debug|x64.Build.0 = Debug|x64
-		{7E3D5A6C-987D-4B9E-B87C-9EAB81926712}.Debug|x86.ActiveCfg = Debug|Win32
-		{7E3D5A6C-987D-4B9E-B87C-9EAB81926712}.Debug|x86.Build.0 = Debug|Win32
-		{7E3D5A6C-987D-4B9E-B87C-9EAB81926712}.Release|x64.ActiveCfg = Release|x64
-		{7E3D5A6C-987D-4B9E-B87C-9EAB81926712}.Release|x64.Build.0 = Release|x64
-		{7E3D5A6C-987D-4B9E-B87C-9EAB81926712}.Release|x86.ActiveCfg = Release|Win32
-		{7E3D5A6C-987D-4B9E-B87C-9EAB81926712}.Release|x86.Build.0 = Release|Win32
 		{CD9D0B38-E530-4173-87A5-5E088535575A}.Debug|x64.ActiveCfg = Debug|x64
 		{CD9D0B38-E530-4173-87A5-5E088535575A}.Debug|x64.Build.0 = Debug|x64
 		{CD9D0B38-E530-4173-87A5-5E088535575A}.Debug|x86.ActiveCfg = Debug|Win32
