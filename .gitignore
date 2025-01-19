@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+C:\Workspace\Github\MudGameProject\Bin\*
+
+C:\Workspace\Github\MudGameProject\Intermediate\*
