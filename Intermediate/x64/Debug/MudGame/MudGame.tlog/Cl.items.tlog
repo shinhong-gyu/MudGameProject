@@ -1,5 +1,7 @@
 C:\Workspace\Github\MudGameProject\MudGame\Actor\Animal.cpp;C:\Workspace\Github\MudGameProject\Intermediate\x64\Debug\MudGame\Animal.obj
 C:\Workspace\Github\MudGameProject\MudGame\Actor\Item\Item.cpp;C:\Workspace\Github\MudGameProject\Intermediate\x64\Debug\MudGame\Item.obj
+C:\Workspace\Github\MudGameProject\MudGame\Actor\Item\Weapon\Knife.cpp;C:\Workspace\Github\MudGameProject\Intermediate\x64\Debug\MudGame\Knife.obj
+C:\Workspace\Github\MudGameProject\MudGame\Actor\Item\Weapon\Weapon.cpp;C:\Workspace\Github\MudGameProject\Intermediate\x64\Debug\MudGame\Weapon.obj
 C:\Workspace\Github\MudGameProject\MudGame\Actor\Item\Wood.cpp;C:\Workspace\Github\MudGameProject\Intermediate\x64\Debug\MudGame\Wood.obj
 C:\Workspace\Github\MudGameProject\MudGame\Actor\Player.cpp;C:\Workspace\Github\MudGameProject\Intermediate\x64\Debug\MudGame\Player.obj
 C:\Workspace\Github\MudGameProject\MudGame\Actor\Tree.cpp;C:\Workspace\Github\MudGameProject\Intermediate\x64\Debug\MudGame\Tree.obj

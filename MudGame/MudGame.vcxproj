@@ -195,6 +195,7 @@ chcp 65001
   <ItemGroup>
     <ClCompile Include="Actor\Animal.cpp" />
     <ClCompile Include="Actor\Item\Item.cpp" />
+    <ClCompile Include="Actor\Item\Weapon\Knife.cpp" />
     <ClCompile Include="Actor\Item\Weapon\Weapon.cpp" />
     <ClCompile Include="Actor\Item\Wood.cpp" />
     <ClCompile Include="Actor\Player.cpp" />
