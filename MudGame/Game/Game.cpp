@@ -15,8 +15,6 @@ Game::Game()
 	mainLevel = new MainLevel();
 }
 
-
-
 Game::~Game()
 {
 	if (bShowMenu)
