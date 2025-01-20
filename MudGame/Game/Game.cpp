@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "Level/MenuLevel.h"
 #include "Level/MainLevel.h"
+#include "Level/BattleScene.h"
 
 Game* Game::instance = nullptr;
 
@@ -13,6 +14,7 @@ Game::Game()
 
 	menuLevel = new MenuLevel();
 	mainLevel = new MainLevel();
+	battleScene = new BattleScene();
 }
 
 Game::~Game()
@@ -37,7 +39,7 @@ void Game::InitGame()
 {
 	backLevel = menuLevel;
 
-	Engine::Get().ClearImage(100,100);
+	Engine::Get().ClearImage(100, 100);
 
 	mainLevel = new MainLevel(CreateRandomMap());
 }
@@ -61,7 +63,7 @@ vector<vector<char>> Game::CreateRandomMap()
 
 	map[0][0] = 'P';
 
-	int treeCount = Random(15, 25);  // 나무는 최소 5개, 최대 10개
+	int treeCount = Random(15, 25);  // 나무는 최소 15개, 최대 25개
 
 	while (treeCount > 0) {
 		int x = Random(0, width) % width;
@@ -103,5 +105,19 @@ void Game::SetMap()
 		{
 			mainL->SetMap(CreateRandomMap());
 		}
+	}
+}
+
+void Game::IntoBattleScene()
+{
+	backLevel = mainLevel;
+	mainLevel = battleScene;
+}
+
+void Game::BackToMainLevel()
+{
+	if (backLevel->As<MainLevel>())
+	{
+		mainLevel = backLevel;
 	}
 }
