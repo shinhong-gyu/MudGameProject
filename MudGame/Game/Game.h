@@ -17,6 +17,7 @@ public:
 	vector<vector<char>> CreateRandomMap();
 
 	void ToggleMenu();
+	void CraftMode();
 
 	void SetMap();
 
@@ -24,8 +25,9 @@ public:
 
 private:
 	bool bShowMenu = false;
-
+	
 	Level* menuLevel = nullptr;
+	Level* craftLevel = nullptr;
 	Level* backLevel = nullptr;
 
 private:

@@ -39,8 +39,10 @@ public:
 private:
 	List<SlotStruct> inventory;
 
-	int hp = 10;
-	int	starve = 10;
+	int hp = 8;
+	int	starve = 8;
 
-	Timer* starveTimer = new Timer(30.0f);
+	Timer* starveTimer = new Timer(10.0f);
+
+	bool bGetControll = true;
 };

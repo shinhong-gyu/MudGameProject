@@ -39,7 +39,7 @@ void Game::InitGame()
 {
 	backLevel = menuLevel;
 
-	Engine::Get().ClearImage(100,100);
+	Engine::Get().ClearImage(100, 100);
 
 	mainLevel = new MainLevel(CreateRandomMap());
 }
@@ -91,6 +91,14 @@ void Game::ToggleMenu()
 	{
 		mainLevel = backLevel;
 	}
+}
+
+void Game::CraftMode()
+{
+	system("cls");
+
+	backLevel = mainLevel;
+	mainLevel = craftLevel;
 }
 
 void Game::SetMap()
