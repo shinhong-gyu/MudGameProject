@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Workspace\\Github\\MudGameProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Weapon\\Knife.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Item\\Weapon\\Knife.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Item\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Item\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Weapon\\Weapon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Item\\Weapon\\Weapon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Weapon\\Weapon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Item\\Weapon\\Weapon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Animal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Animal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MainLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Level\\MainLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Tree.h||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Tree.h||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MenuLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Level\\MenuLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -13,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MainLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Level\\MainLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,44 +71,16 @@
       "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\WORKSPACE\\GITHUB\\MUDGAMEPROJECT\\INCLUDES\\ENGINE\\ENGINE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:INCLUDES\\ENGINE\\ENGINE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Animal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Animal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Animal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Animal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Tree.h||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Tree.h||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Ground.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Ground.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Item\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MainLevel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -79,20 +91,12 @@
       "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Item\\Wood.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Item\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|C:\\Workspace\\Github\\MudGameProject\\Engine\\Actor\\DrawableActor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Actor\\DrawableActor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|C:\\Workspace\\Github\\MudGameProject\\Engine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|solutionrelative:Engine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\WORKSPACE\\GITHUB\\MUDGAMEPROJECT\\INCLUDES\\CONTAINER\\LIST.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:INCLUDES\\CONTAINER\\LIST.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AF7846AD-5110-47CC-9967-627382DFCDA2}|Engine\\Engine.vcxproj|C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -105,6 +109,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Wood.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CD9D0B38-E530-4173-87A5-5E088535575A}|MudGame\\MudGame.vcxproj|solutionrelative:MudGame\\Actor\\Item\\Wood.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Workspace\\Github\\MudGameProject\\Includes\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Workspace\\Github\\MudGameProject\\Includes\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,24 +126,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Game.h",
-              "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Game\\Game.h",
-              "RelativeDocumentMoniker": "MudGame\\Game\\Game.h",
-              "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Game\\Game.h",
-              "RelativeToolTip": "MudGame\\Game\\Game.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Knife.h",
+              "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Weapon\\Knife.h",
+              "RelativeDocumentMoniker": "MudGame\\Actor\\Item\\Weapon\\Knife.h",
+              "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Weapon\\Knife.h",
+              "RelativeToolTip": "MudGame\\Actor\\Item\\Weapon\\Knife.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-17T08:35:36.39Z",
+              "WhenOpened": "2025-01-20T04:56:49.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
+              "Title": "Weapon.cpp",
+              "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Weapon\\Weapon.cpp",
+              "RelativeDocumentMoniker": "MudGame\\Actor\\Item\\Weapon\\Weapon.cpp",
+              "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Weapon\\Weapon.cpp",
+              "RelativeToolTip": "MudGame\\Actor\\Item\\Weapon\\Weapon.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-20T04:47:54.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Weapon.h",
+              "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Weapon\\Weapon.h",
+              "RelativeDocumentMoniker": "MudGame\\Actor\\Item\\Weapon\\Weapon.h",
+              "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Weapon\\Weapon.h",
+              "RelativeToolTip": "MudGame\\Actor\\Item\\Weapon\\Weapon.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-20T04:46:24.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Animal.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Animal.cpp",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Animal.cpp",
@@ -144,20 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Game.cpp",
-              "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Game\\Game.cpp",
-              "RelativeDocumentMoniker": "MudGame\\Game\\Game.cpp",
-              "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Game\\Game.cpp",
-              "RelativeToolTip": "MudGame\\Game\\Game.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-17T08:07:55.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "MenuLevel.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MenuLevel.h",
               "RelativeDocumentMoniker": "MudGame\\Level\\MenuLevel.h",
@@ -170,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Animal.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Animal.h",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Animal.h",
@@ -183,13 +208,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "MainLevel.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MainLevel.cpp",
               "RelativeDocumentMoniker": "MudGame\\Level\\MainLevel.cpp",
               "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MainLevel.cpp",
               "RelativeToolTip": "MudGame\\Level\\MainLevel.cpp",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAALoAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAYwK4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-17T06:10:43.598Z",
               "EditorCaption": ""
@@ -202,27 +227,27 @@
               "RelativeDocumentMoniker": "Engine\\Engine\\Engine.cpp",
               "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Engine.cpp",
               "RelativeToolTip": "Engine\\Engine\\Engine.cpp",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAewDUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAewIsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-17T02:30:01.215Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Player.cpp",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Player.cpp",
               "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Player.cpp",
               "RelativeToolTip": "MudGame\\Actor\\Player.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAACUAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-17T01:47:39.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "MainLevel.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MainLevel.h",
               "RelativeDocumentMoniker": "MudGame\\Level\\MainLevel.h",
@@ -235,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Main.cpp",
               "RelativeDocumentMoniker": "MudGame\\Main.cpp",
@@ -248,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "Tree.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Tree.cpp",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Tree.cpp",
@@ -261,33 +286,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 2,
               "Title": "Item.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Item.cpp",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Item\\Item.cpp",
               "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Item.cpp",
               "RelativeToolTip": "MudGame\\Actor\\Item\\Item.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-17T01:29:00.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "MenuLevel.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MenuLevel.cpp",
               "RelativeDocumentMoniker": "MudGame\\Level\\MenuLevel.cpp",
-              "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MenuLevel.cpp*",
-              "RelativeToolTip": "MudGame\\Level\\MenuLevel.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABIAAAAAAAAAA==",
+              "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Level\\MenuLevel.cpp",
+              "RelativeToolTip": "MudGame\\Level\\MenuLevel.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-17T03:55:25.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 10,
               "Title": "Tree.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Tree.h",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Tree.h",
@@ -300,33 +325,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Engine.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Engine.h",
               "RelativeDocumentMoniker": "Engine\\Engine\\Engine.h",
               "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Engine.h",
               "RelativeToolTip": "Engine\\Engine\\Engine.h",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAewEMAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAewA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-17T02:30:10.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 1,
               "Title": "Item.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Item.h",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Item\\Item.h",
               "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Item.h",
               "RelativeToolTip": "MudGame\\Actor\\Item\\Item.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-17T01:28:10.985Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Game\\Game.cpp",
+              "RelativeDocumentMoniker": "MudGame\\Game\\Game.cpp",
+              "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Game\\Game.cpp",
+              "RelativeToolTip": "MudGame\\Game\\Game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-17T08:07:55.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Game\\Game.h",
+              "RelativeDocumentMoniker": "MudGame\\Game\\Game.h",
+              "ToolTip": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Game\\Game.h",
+              "RelativeToolTip": "MudGame\\Game\\Game.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-17T08:35:36.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Player.h",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Player.h",
@@ -339,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 27,
               "Title": "Engine.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\Includes\\Engine\\Engine.h",
               "RelativeDocumentMoniker": "Includes\\Engine\\Engine.h",
@@ -352,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Ground.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Ground.h",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Ground.h",
@@ -365,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "DrawableActor.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\Engine\\Actor\\DrawableActor.cpp",
               "RelativeDocumentMoniker": "Engine\\Actor\\DrawableActor.cpp",
@@ -378,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Wood.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Wood.h",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Item\\Wood.h",
@@ -391,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Wood.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\MudGame\\Actor\\Item\\Wood.cpp",
               "RelativeDocumentMoniker": "MudGame\\Actor\\Item\\Wood.cpp",
@@ -404,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Core.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\Engine\\Core.h",
               "RelativeDocumentMoniker": "Engine\\Core.h",
@@ -417,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "List.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\Includes\\Container\\List.h",
               "RelativeDocumentMoniker": "Includes\\Container\\List.h",
@@ -430,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Timer.cpp",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Timer.cpp",
               "RelativeDocumentMoniker": "Engine\\Engine\\Timer.cpp",
@@ -443,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Timer.h",
               "DocumentMoniker": "C:\\Workspace\\Github\\MudGameProject\\Engine\\Engine\\Timer.h",
               "RelativeDocumentMoniker": "Engine\\Engine\\Timer.h",
