@@ -217,11 +217,11 @@ chcp 65001
     <ClInclude Include="Actor\Tree.h" />
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Actor\Ground.h" />
-<<<<<<< HEAD
+
     <ClInclude Include="Level\CraftLevel.h" />
-=======
+
     <ClInclude Include="Level\BattleScene.h" />
->>>>>>> develop
+
     <ClInclude Include="Level\MainLevel.h" />
     <ClInclude Include="Level\MenuLevel.h" />
   </ItemGroup>
