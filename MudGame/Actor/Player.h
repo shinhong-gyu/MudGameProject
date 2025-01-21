@@ -30,6 +30,13 @@ public:
 	virtual void Update(float deltaTime) override;
 
 	void AddToInventory(Item* item, int quantity);
+	void RemoveFromInventory(const char* name, int quantity);
+
+	bool SearchItemByType(ItemType type);
+
+	vector<Item*> GetItemListByType(ItemType type);
+
+	int GetQuantity(const char* name);
 
 	int GetHP() const { return hp; }
 	void SetHP(int value) { hp = value; }
@@ -37,12 +44,12 @@ public:
 	void SetStarve(int value) { starve = value; }
 
 private:
-	List<SlotStruct> inventory;
+	vector<SlotStruct> inventory;
 
 	int hp = 8;
 	int	starve = 8;
 
 	Timer* starveTimer = new Timer(10.0f);
 
-	bool bGetControll = true;
+	bool bGetControl = true;
 };

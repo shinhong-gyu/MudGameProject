@@ -41,6 +41,6 @@ private:
 	Color selectedColor = Color::Green;
 	Color unselectedColor = Color::White;
 
-	List<MenuItem*> menuItems;
+	vector<MenuItem*> menuItems;
 	int length = 0;
 };

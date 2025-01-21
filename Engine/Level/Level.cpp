@@ -49,13 +49,13 @@ void Level::AddActor(Actor* newActor)
 void Level::ProcessAddedAndDestroyActor()
 {
 	// 액터 순회 후 삭제 요청된 액터를 처리.	
-	for (int i = 0; i < actors.Size();)
+	for (int i = 0; i < actors.size();)
 	{
 		if (actors[i]->isExpired == true)
 		{
 			delete actors[i];
 			actors[i] = nullptr;
-			actors.Erase(i);
+			actors.erase(actors.begin()+i);
 			continue;
 		}
 		++i;
@@ -64,7 +64,7 @@ void Level::ProcessAddedAndDestroyActor()
 	// 추가 요청된 액터 처리
 	if (addRequestedActor != nullptr)
 	{
-		actors.PushBack(addRequestedActor);
+		actors.push_back(addRequestedActor);
 		addRequestedActor = nullptr;
 	}
 }

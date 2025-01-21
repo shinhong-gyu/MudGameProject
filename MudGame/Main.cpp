@@ -15,6 +15,6 @@ int main()
 
 	Game game;
 	game.LoadLevel(new MenuLevel());
-	game.SetMap();
+	//game.SetMap();
 	game.Run();
 }

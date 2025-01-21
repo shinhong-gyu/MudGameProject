@@ -6,6 +6,8 @@
 
 using namespace std;
 
+class Player;
+
 class Game : public Engine
 {
 public:
@@ -25,7 +27,13 @@ public:
 
 	void BackToMainLevel();
 
+	void PrintLoseImage();
+
+	void PrintWinImage();
+
 	static Game& Get() { return *instance; }
+
+	Player* player;
 
 private:
 	bool bShowMenu = false;
@@ -35,6 +43,8 @@ private:
 	Level* backLevel = nullptr;
 	Level* battleScene = nullptr;
 
+	vector<wstring> loseImage;
+	vector<wstring> winImage;
 private:
 	static Game* instance;
 };

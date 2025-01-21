@@ -4,11 +4,12 @@
 enum class ItemType :unsigned short
 {
 	Wood = 1,
-	Meet = 2,
+	Meat = 2,
 	Weapon = 3,
 };
 
 
+class Player;
 
 class Item : public DrawableActor
 {
@@ -20,7 +21,12 @@ public:
 	virtual void Use() = 0;
 	char* GetName() const { return name; }
 	ItemType GetItemType() const { return itemType; }
+
+	void SetOwner(Player* value) { owner = value; }
+
 protected:
 	ItemType itemType = ItemType::Wood;
 	char* name = nullptr;
+
+	Player* owner = nullptr;
 };
