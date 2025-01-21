@@ -21,6 +21,10 @@ public:
 
 	void SetMap();
 
+	void IntoBattleScene();
+
+	void BackToMainLevel();
+
 	static Game& Get() { return *instance; }
 
 private:
@@ -29,6 +33,7 @@ private:
 	Level* menuLevel = nullptr;
 	Level* craftLevel = nullptr;
 	Level* backLevel = nullptr;
+	Level* battleScene = nullptr;
 
 private:
 	static Game* instance;

@@ -1,14 +1,15 @@
 ﻿#include "Wood.h"
 
-Wood::Wood()
+Wood::Wood(const char* name)
+	: Item(name)
 {
 	itemType = ItemType::Wood;
 
-	int length = strlen("목재") + 1;
+	size_t length = strlen("목재") + 1;
 
 	this->name = new char[length];
 
-	strcpy_s(this->name,length,"목재");
+	strcpy_s(this->name, length, "목재");
 }
 
 void Wood::Use()

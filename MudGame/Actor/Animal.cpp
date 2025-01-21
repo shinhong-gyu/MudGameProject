@@ -1,7 +1,9 @@
 ﻿#include "Animal.h"
 
 Animal::Animal(const Vector2& position)
-	:DrawableActor("🐻")
+	:DrawableActor("A")
 {
-	
+	this->position = position;
+
+	SetColor(Color::Red);
 }

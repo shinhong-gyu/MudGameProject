@@ -5,7 +5,7 @@ class Wood : public Item
 {
 	RTTI_DECLARATIONS(Wood, Item)
 public:
-	Wood();
+	Wood(const char* name);
 
 	virtual void Use() override;
 private:

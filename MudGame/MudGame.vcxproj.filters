@@ -45,6 +45,15 @@
     <ClCompile Include="Actor\Animal.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Actor\Item\Weapon\Weapon.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Item\Weapon\Knife.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Level\BattleScene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Game.h">
@@ -74,7 +83,17 @@
     <ClInclude Include="Actor\Animal.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Level\CraftLevel.h">
+=======
+    <ClInclude Include="Actor\Item\Weapon\Weapon.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Item\Weapon\Knife.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Level\BattleScene.h">
+>>>>>>> develop
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
