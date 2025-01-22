@@ -6,6 +6,7 @@
 #include "Level/CraftLevel.h"
 
 #include "Actor/Player.h"
+#include "Level/GameOverLevel.h"
 
 Game* Game::instance = nullptr;
 
@@ -18,7 +19,10 @@ Game::Game()
 
 	menuLevel = new MenuLevel();
 	mainLevel = new MainLevel(CreateRandomMap());
+	mainLevel->bIsMainLevel = true;
 	craftLevel = new CraftLevel();
+	gameOverLevel = new GameOverLevel();
+
 	player = mainLevel->As<MainLevel>()->player;
 
 	battleScene = new BattleScene();
@@ -77,33 +81,74 @@ Game::Game()
 	winImage.push_back(L"⡕⠵⡽⣝⢮⢝⢜⡔⡆⡇⡇⡅⡂⡁⠢⡂⢆⣢⣢⢣⠨⡘⡜⡌⡊⡌⣆⣂⠐⡀⢂⠐⡐⢐⢄⢥⢕⢧⡣⡣⣝⡜⣎⢗⣝⢼⢹⢼⢱⠁");
 	winImage.push_back(L"⢱⠱⡱⡱⣣⢫⡓⡵⡜⡜⡌⡎⢆⠂⠅⠕⡑⡑⠜⡐⢅⠕⡨⠨⢊⠔⡑⠕⢑⠐⡀⡆⣆⢖⢇⢇⢇⡇⡗⡽⣪⣚⢎⡏⣮⡳⡕⡇⢇⠕");
 	winImage.push_back(L"⢕⢕⠱⡘⡌⣓⢎⢎⢎⢳⡑⡕⢕⠕⡅⣂⢐⠠⠑⠨⠐⢐⠠⠑⡐⠐⡈⣈⢴⡘⡮⡯⢮⢮⢺⢕⢵⢫⢮⡻⡜⣎⢇⢗⢕⠕⢅⠣⡡⠅");
+
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣟⣟⢟⡿⣽⣷⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣽⢝⣽⣯⣾⣿⣿⣿⣿⣿⣦⣶⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣿⢿⣟⣿⣿⣿⡿⣿⡿⣿⣿⣿⣿⣿⣶⣦⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣷⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⢿⣯⣿⣿⣾⣿⣿⣿⣷⣿⣷⣿⡟⠙⠚⠓⠛⠝⠟⠿⠛⠛⢿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣽⣿⣽⣿⢷⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣬⠀⠀⠀⠀⠀⣰⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⢺⣿⣿⣿⡿⢿⣾⣿⢿⣯⣿⣿⣟⣿⡿⣿⣟⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣖⢶⡶⣾⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⠇⠸⣿⣿⣿⣿⡿⣿⡿⣿⣿⡿⣿⣿⣧⣀⣀⣤⣤⣤⣤⣤⡾⣿⣿⢿⣿⣿⢿⣷⡷⣻⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⡀⠀⠀⠀⣿⣿⣿⠀⠀⢹⣿⣿⣻⣿⣿⣿⣿⣿⣿⣿⣿⢷⣹⣿⣿⣟⣿⡷⣿⣻⣿⣟⣿⣯⣟⣏⢻⣿⣽⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠈⠐⠤⣀⢹⣿⡿⠀⠀⠈⣿⣿⣿⣿⣯⣿⣿⣷⣿⣿⣯⣿⠺⣿⣽⣿⣽⣿⢿⣿⣿⣿⣿⢯⢿⡟⣼⡿⢧⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠈⢿⣾⣷⡀⠀⠀⣿⣿⢿⣷⣿⣿⣯⣿⣿⣷⣿⣿⣻⣿⣿⣿⣽⣿⣿⣿⣿⣻⣿⣿⣿⣷⣿⡜⣣⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠈⠋⠉⠙⢶⣤⣸⣿⣿⣿⣯⣿⣿⣻⣷⣻⡾⣶⣹⣿⣿⣽⣯⣿⣷⣿⣿⣿⣿⣿⣿⣻⣿⣿⣿⣿⣶⡀⠀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣷⣿⣿⢗⣿⢾⣽⣻⢾⣾⡿⣯⣿⣟⣿⣻⣿⣿⣿⣿⣿⣿⣻⣿⣿⣿⣿⣿⣶⡀⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⢷⣿⣞⡿⣽⣻⣗⣯⡿⣫⠺⠿⣿⣽⡏⠋⠙⣟⣯⣿⣿⣿⣿⣌⠙⣥⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣻⡾⣟⣿⣽⡳⣟⡾⣹⡗⠱⣄⢹⣾⠁⠀⠀⠘⢿⣿⣿⣿⢿⣿⣿⣿⡿⣿⢿⠿⣿⡄⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣽⣻⣟⣿⣻⣿⠝⠞⠟⢠⣿⢻⣧⡁⠀⠀⠀⠀⠀⠻⢿⣿⢿⢟⣾⣿⣿⣿⣿⣿⣟⡅⠀⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣯⢿⣽⣟⡿⠀⠀⠀⠀⠘⣷⣽⡇⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠈⠉⠉⠉⠑⢯⣾⡯⣄⡀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣫⣷⣟⣿⡽⣦⡀⠀⠀⠙⠞⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀");
+	runImage.push_back(L"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠺⣽⣞⣯⠿⡽⠢⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
 }
 
 Game::~Game()
 {
 	if (bShowMenu)
 	{
-		delete backLevel;
-		backLevel = nullptr;
-		mainLevel = nullptr;
+		if (backLevel)
+		{
+			delete backLevel;
+			backLevel = nullptr;
+			mainLevel = nullptr;
+		}
 	}
 	else
 	{
+		if (!mainLevel->As<GameOverLevel>())
+		{
+			delete gameOverLevel;
+		}
 		delete mainLevel;
 		mainLevel = nullptr;
 	}
 
 	delete menuLevel;
+	delete craftLevel;
+	delete battleScene;
 	menuLevel = nullptr;
+	gameOverLevel = nullptr;
+	battleScene = nullptr;
+	craftLevel = nullptr;
 }
 
 void Game::InitGame()
 {
-	backLevel = menuLevel;
-
 	Engine::Get().ClearImage(100, 100);
 
 	mainLevel = new MainLevel(CreateRandomMap());
+	mainLevel->bIsMainLevel = true;
+	player = mainLevel->As<MainLevel>()->player;
+
+	menuLevel = new MenuLevel();
+	craftLevel = new CraftLevel();
+	gameOverLevel = new GameOverLevel();
+	battleScene = new BattleScene();
+	backLevel = menuLevel;
 }
 
 vector<vector<char>> Game::CreateRandomMap()
@@ -144,6 +189,8 @@ void Game::ToggleMenu()
 
 	bShowMenu = !bShowMenu;
 
+	mainLevel->bIsMainLevel = false;
+
 	if (bShowMenu)
 	{
 		backLevel = mainLevel;
@@ -153,11 +200,15 @@ void Game::ToggleMenu()
 	{
 		mainLevel = backLevel;
 	}
+
+	mainLevel->bIsMainLevel = true;
 }
 
 void Game::CraftMode()
 {
 	system("cls");
+
+	mainLevel->bIsMainLevel = false;
 
 	backLevel = mainLevel;
 	mainLevel = craftLevel;
@@ -184,7 +235,15 @@ void Game::IntoBattleScene()
 {
 	system("cls");
 
+	mainLevel->bIsMainLevel = false;
+
 	backLevel = mainLevel;
+
+	if (auto* bl = battleScene->As<BattleScene>())
+	{
+		bl->bIsExpired = false;
+	}
+
 	mainLevel = battleScene;
 
 	mainLevel->bIsMainLevel = true;
@@ -192,13 +251,17 @@ void Game::IntoBattleScene()
 
 void Game::BackToMainLevel()
 {
+	Engine::Get().SetCursorPosition(0, 0);
+
 	system("cls");
+	Engine::Get().ClearInfoUI();
 	mainLevel->bIsMainLevel = false;
 
 	if (backLevel->As<MainLevel>())
 	{
 		mainLevel = backLevel;
 	}
+	mainLevel->bIsMainLevel = true;
 }
 
 void Game::PrintLoseImage()
@@ -215,6 +278,10 @@ void Game::PrintLoseImage()
 		wcout << line << L"\n";
 	}
 	SetConsoleOutputCP(949);
+	SetColor(Color::Red);
+	cout << "곰과 싸워서 패배했다 (HP -3)\n\n";
+
+	SetColor(Color::White);
 	cout << "ESC 눌러서 계속하기\n";
 }
 
@@ -232,8 +299,80 @@ void Game::PrintWinImage()
 		wcout << line << L"\n";
 	}
 	SetConsoleOutputCP(949);
-	cout << "ESC 눌러서 계속하기\n";
+	SetColor(Color::Green);
+	cout << "곰과 싸워서 승리했다 (고기 +1)\n\n";
 
+	SetColor(Color::White);
+	cout << "ESC 눌러서 계속하기\n";
+}
+
+void Game::PrintRunImage()
+{
+	SetConsoleOutputCP(CP_UTF8);
+
+	system("cls");
+
+	SetColor(Color::White);
+	Engine::Get().SetCursorPosition(0, 0);
+
+	for (const auto& line : runImage)
+	{
+		wcout << line << L"\n";
+	}
+	SetConsoleOutputCP(949);
+	SetColor(Color::Blue);
+	cout << "도망치는데 성공했다.\n\n";
+
+	SetColor(Color::White);
+	cout << "ESC 눌러서 계속하기\n";
+}
+
+void Game::GameOver()
+{
+	system("cls");
+	mainLevel = gameOverLevel;
+	backLevel = mainLevel;
+
+	SetConsoleOutputCP(CP_UTF8);
+	wcout << L"⡿⣿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⣻\n";
+	wcout << L"⢿⣽⢯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⢽⣷\n";
+	wcout << L"⣯⣟⣯⣿⠈⣷⣿⠈⣷⠀⣿⣳⣟⣾⣳⣿⣀⣀⣀⠨⣀⣀⣀⣞⣷⣻⣞⣷⣻⣾⠁⣿⣞⣷⡇⢸⣷⣟⣾⣳⣟⠚⡓⢛⠚⣣⠹⡆⢸⣯⡿⣞\n";
+	wcout << L"⣻⣾⣳⠟⣀⠹⣾⠅⣙⠀⣿⣟⣾⡽⣷⡝⠓⣉⣴⢶⣌⡙⠺⣗⣿⣵⣟⡷⡿⠎⣠⡘⠿⣺⡇⢹⣟⣾⡽⣷⣻⡏⢹⡏⢹⣟⠸⡇⢸⡿⣾⣟\n";
+	wcout << L"⡿⣾⣥⣴⣿⡷⣴⢃⣿⠀⣿⣟⡾⣯⣟⠛⠛⠛⠛⠐⠛⠛⠛⢻⣵⢿⣞⣿⣦⡾⠛⠛⠆⠛⠣⢾⡿⣽⢾⣯⢿⣇⢸⡇⢸⡿⢠⡄⢸⣟⣷⢯\n";
+	wcout << L"⣿⣳⢿⡾⢁⣴⣶⣶⣤⠙⣿⣽⣻⣽⣻⢿⡏⢽⣿⣿⡿⣿⡿⣿⢯⣿⣽⣞⣷⡟⠛⡛⡛⡛⡃⣺⣟⣯⣿⣳⣯⣡⣬⣥⣬⡽⢨⡇⢸⣯⣟⣯\n";
+	wcout << L"⡾⣯⣟⣿⣤⣉⣑⣉⣠⣴⣿⢷⣻⢾⣯⣟⣇⣀⣀⣀⣀⣀⣀⣟⡿⡾⣾⡽⣾⣇⣘⣋⣛⣙⣋⣹⣟⣾⢗⣿⣳⣟⣷⣻⣞⣯⣘⣇⣸⣟⣾⢯\n";
+	wcout << L"⡿⣿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⣻\n";
+	wcout << L"⢿⣽⢯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⣽⣻⣯⣟⣿⢽⣷\n";
+
+	if (auto* gol = dynamic_cast<GameOverLevel*>(gameOverLevel))
+	{
+		gol->TimerWork();
+	}
+}
+
+void Game::AliveSuccess()
+{
+	system("cls");
+	mainLevel = gameOverLevel;
+	backLevel = mainLevel;
+
+	SetConsoleOutputCP(CP_UTF8);
+
+	wcout << L"⣟⣟⣯⣿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣯⢿⣻⣽\n";
+	wcout << L"	⣽⡽⣷⣻⡾⣽⣻⣗⡿⣯⢿⣞⣿⡽⣾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⢾⣻⣽⡾\n";
+	wcout << L"	⣯⢿⣽⢾⠻⣽⢷⠛⣽⠫⣟⣷⢯⣿⢽⣻⠞⠟⠯⠻⠻⠝⠯⡿⣯⣟⣿⢽⣯⢿⣯⠻⣻⣽⢯⡟⢫⣟⣿⢽⣯⢿⡯⡟⠟⠽⠫⠟⠯⢟⣿⢽⣷⣻\n";
+	wcout << L"	⣾⣻⣽⠯⠈⣿⢯⠅⠿⢈⣿⢾⣻⣽⣻⣽⢿⠽⠋⣠⡙⠯⣯⣿⣳⢿⣺⡿⣞⣿⠾⠈⢿⡚⡛⡃⢺⣻⣾⣻⡽⣯⢿⣽⢯⡟⢽⣯⡇⢺⣽⣟⣾⡽\n";
+	wcout << L"	⣯⣷⠋⣡⡷⣌⢻⡀⣾⢐⣯⡿⣽⣾⣻⢾⢴⣲⣿⠉⡿⣖⣦⢾⣽⣻⣽⢯⡿⠙⣡⡷⣌⠙⣟⡇⢼⣟⣾⡽⣯⢿⠫⠻⠹⠃⠜⠗⠧⠛⢗⣯⡷⣟\n";
+	wcout << L"	⣻⢾⣻⡯⠟⢋⣋⣒⠛⢴⡷⣟⣿⣺⣽⡵⡦⢦⢶⡴⣦⢶⡴⣦⢷⡿⣾⣻⣻⢿⡽⠛⣙⣙⡙⠓⣾⡽⣾⣻⣽⣟⣯⡿⠛⣙⣙⡙⠻⣻⣽⢷⣟⣿\n";
+	wcout << L"⡽⣿⢽⣇⠸⠿⡽⡾⠻⢠⡿⣯⡷⣟⣷⣟⡇⢸⢟⢯⠿⡯⡿⣽⣯⢿⣽⢾⣻⣽⣇⠺⠯⡿⡽⠇⣸⣯⣟⣷⣻⣞⣷⢅⠻⢽⠯⠿⢁⣽⢾⣻⣽⢾\n";
+	wcout << L"	⣻⣽⡯⣿⡽⣶⣲⡶⣞⣯⣿⣳⡿⣯⣷⣻⣗⣶⢶⢶⡶⣖⣾⣳⢿⡽⣯⣟⡿⡾⣾⣳⡶⣶⣲⣾⣻⣞⡷⣯⡷⣿⢽⣯⢷⣖⣶⡶⡿⣞⣿⣻⢾⣻\n";
+	wcout << L"	⣟⣾⣻⢷⣟⣯⡷⣟⣯⣷⣯⡷⣟⣷⣟⣾⣽⢾⣻⣯⣟⣯⡷⣟⣯⣿⣻⣞⣿⣻⣽⢷⣟⣯⡷⣟⣾⣽⣻⣽⢯⣿⣽⢾⣻⣽⢾⣻⣻⣯⡷⣟⣿⡽\n";
+	wcout << L"	⡿⣞⣯⣟⣷⣻⣽⢿⣽⢾⣞⣿⡽⣷⣻⡾⣽⣻⣽⢾⣽⢾⣻⣯⡷⣟⣾⣽⢾⣻⣞⣯⡿⣞⡿⣯⡷⣟⣷⣻⣟⣾⢾⣻⣟⣾⢿⡽⣷⢯⣟⣯⡷⡯\n";
+
+	if (auto* gol = dynamic_cast<GameOverLevel*>(gameOverLevel))
+	{
+		gol->TimerWork();
+	}
 
 }
 

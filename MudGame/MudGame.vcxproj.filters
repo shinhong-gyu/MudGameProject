@@ -18,6 +18,8 @@
     <ClCompile Include="Level\CraftLevel.cpp" />
     <ClCompile Include="Actor\Item\Weapon\Club.cpp" />
     <ClCompile Include="Actor\Item\Weapon\WoodSword.cpp" />
+    <ClCompile Include="Actor\Item\Medicine.cpp" />
+    <ClCompile Include="Level\GameOverLevel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor\Animal.h" />
@@ -36,5 +38,7 @@
     <ClInclude Include="Actor\Item\Meat.h" />
     <ClInclude Include="Actor\Item\Weapon\Club.h" />
     <ClInclude Include="Actor\Item\Weapon\WoodSword.h" />
+    <ClInclude Include="Actor\Item\Medicine.h" />
+    <ClInclude Include="Level\GameOverLevel.h" />
   </ItemGroup>
 </Project>

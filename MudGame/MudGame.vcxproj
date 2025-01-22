@@ -196,6 +196,7 @@ chcp 65001
     <ClCompile Include="Actor\Animal.cpp" />
     <ClCompile Include="Actor\Item\Item.cpp" />
     <ClCompile Include="Actor\Item\Meat.cpp" />
+    <ClCompile Include="Actor\Item\Medicine.cpp" />
     <ClCompile Include="Actor\Item\Weapon\Club.cpp" />
     <ClCompile Include="Actor\Item\Weapon\Knife.cpp" />
     <ClCompile Include="Actor\Item\Weapon\Weapon.cpp" />
@@ -207,6 +208,7 @@ chcp 65001
     <ClCompile Include="Actor\Ground.cpp" />
     <ClCompile Include="Level\BattleScene.cpp" />
     <ClCompile Include="Level\CraftLevel.cpp" />
+    <ClCompile Include="Level\GameOverLevel.cpp" />
     <ClCompile Include="Level\MainLevel.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Level\MenuLevel.cpp" />
@@ -215,6 +217,7 @@ chcp 65001
     <ClInclude Include="Actor\Animal.h" />
     <ClInclude Include="Actor\Item\Item.h" />
     <ClInclude Include="Actor\Item\Meat.h" />
+    <ClInclude Include="Actor\Item\Medicine.h" />
     <ClInclude Include="Actor\Item\Weapon\Club.h" />
     <ClInclude Include="Actor\Item\Weapon\Knife.h" />
     <ClInclude Include="Actor\Item\Weapon\Weapon.h" />
@@ -226,6 +229,7 @@ chcp 65001
     <ClInclude Include="Actor\Ground.h" />
     <ClInclude Include="Level\CraftLevel.h" />
     <ClInclude Include="Level\BattleScene.h" />
+    <ClInclude Include="Level\GameOverLevel.h" />
     <ClInclude Include="Level\MainLevel.h" />
     <ClInclude Include="Level\MenuLevel.h" />
   </ItemGroup>

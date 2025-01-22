@@ -14,12 +14,12 @@ void Club::Use()
 	float randNo = RandomPercent(0, 1);
 	if (randNo >= 0.5)
 	{
-		Game::Get().player->SetHP(Game::Get().player->GetHP() - 1);
+		Game::Get().player->SetHP(Game::Get().player->GetHP() - 3);
 		Game::Get().PrintLoseImage();
 	}
 	else
 	{
-		Game::Get().player->AddToInventory(new Meat("고 기"), 1);
+		Game::Get().player->AddToInventory(new Meat("고 기", Game::Get().player), 1);
 		Game::Get().PrintWinImage();
 	}
 }

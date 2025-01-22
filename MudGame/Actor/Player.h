@@ -7,6 +7,10 @@
 
 class Timer;
 
+
+#define MAX_HP 8
+#define MAX_STARVE 8
+
 struct SlotStruct
 {
 	Item* item = nullptr;
@@ -41,7 +45,13 @@ public:
 	int GetHP() const { return hp; }
 	void SetHP(int value) { hp = value; }
 	int GetStarve() const { return starve; }
-	void SetStarve(int value) { starve = value; }
+	void SetStarve(int value)
+	{
+		starve = value;
+		if (starve > MAX_STARVE)
+			starve = MAX_STARVE;
+		if (starve < 0) starve = 0;
+	}
 
 private:
 	vector<SlotStruct> inventory;
@@ -49,7 +59,8 @@ private:
 	int hp = 8;
 	int	starve = 8;
 
-	Timer* starveTimer = new Timer(10.0f);
+	Timer* starveTimer = new Timer(1.0f);
 
 	bool bGetControl = true;
+	bool bInventoryChanged = false;
 };

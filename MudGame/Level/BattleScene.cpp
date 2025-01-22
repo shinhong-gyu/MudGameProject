@@ -9,12 +9,6 @@
 #include "Actor/Item/Item.h"
 #include "Actor/Item/Weapon/Weapon.h"
 
-static int g_nScreenIndex;//콘솔 접근 인덱스
-static HANDLE g_hScreen[2];//콘솔2개
-int g_numOfFrame;//누적 프레임
-int g_numOfFPS;//분당 프레임
-
-
 
 BattleScene::BattleScene()
 {
@@ -37,35 +31,38 @@ BattleScene::BattleScene()
 
 
 
-	selections.push_back(new Selection("맨손 격투", []() {
+	selections.push_back(new Selection("맨손 격투(이길 확률 10%)", []() {
 		float randNo = RandomPercent(0, 1);
 		if (randNo >= 0.1)
 		{
-			Game::Get().player->SetHP(Game::Get().player->GetHP() - 1);
+			Game::Get().player->SetHP(Game::Get().player->GetHP() - 3);
 			Game::Get().PrintLoseImage();
 		}
 		else
 		{
-			Game::Get().player->AddToInventory(new Meat("고 기"), 1);
+			Game::Get().player->AddToInventory(new Meat("고 기", Game::Get().player), 1);
 			Game::Get().PrintWinImage();
 		}
 		}));
 	selections.push_back(new Selection("도망치기", []()
 		{
+			Game::Get().PrintRunImage();
 			if (auto* battleL = dynamic_cast<BattleScene*>(Game::Get().GetLevel()))
 			{
 				battleL->bIsExpired = false;
 				battleL->timer->Reset();
 				battleL->timer->bActive = false;
 				battleL->bShowWeaponList = false;
+				battleL->bOnce = false;
 			}
-			Game::Get().BackToMainLevel();
 		}));
 }
 
 void BattleScene::Update(float deltaTime)
 {
 	timer->Update(deltaTime);
+
+	
 
 	weaponList = Game::Get().player->GetItemListByType(ItemType::Weapon);
 
@@ -82,27 +79,29 @@ void BattleScene::Update(float deltaTime)
 	{
 		if (bShowWeaponList)
 		{
-			currentWeaponIndex = (currentWeaponIndex - 1 + weaponList.size()) % weaponList.size();
+			currentWeaponIndex = (currentWeaponIndex - 1 + (int)weaponList.size()) % (int)weaponList.size();
 		}
 		else
 		{
-			currentIndex = (currentIndex - 1 + selections.size()) % selections.size();
+			currentIndex = (currentIndex - 1 + (int)selections.size()) % (int)selections.size();
 		}
 	}
 	if (Game::Get().GetKeyDown(VK_RIGHT))
 	{
 		if (bShowWeaponList)
 		{
-			currentWeaponIndex = (currentWeaponIndex + 1) % weaponList.size();
+			currentWeaponIndex = (currentWeaponIndex + 1) % (int)weaponList.size();
 		}
 		else
 		{
-			currentIndex = (currentIndex + 1) % selections.size();
+			currentIndex = (currentIndex + 1) % (int)selections.size();
 		}
 	}
 
 	if (Game::Get().GetKeyDown(VK_RETURN))
 	{
+		if(bIsExpired) return;
+
 		if (bShowWeaponList)
 		{
 			weaponList[currentWeaponIndex]->Use();
@@ -177,10 +176,17 @@ void BattleScene::Draw()
 
 	if (!bShowWeaponList)
 	{
+		int count = 0;
 		for (int ix = 0; ix < selections.size(); ++ix)
 		{
+			count++;
 			SetColor(ix == currentIndex ? selectedColor : unselectedColor);
 			cout << "\t" << selections[ix]->selection << "\t";
+			if (count == 2)
+			{
+				count = 0;
+				cout << "\n";
+			}
 		}
 		cout << "\n";
 	}

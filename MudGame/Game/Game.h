@@ -31,20 +31,32 @@ public:
 
 	void PrintWinImage();
 
+	void PrintRunImage();
+
+	void GameOver();
+
+	void AliveSuccess();
+
+	Level* GetCraftLevel() const { return craftLevel; }
+
+
 	static Game& Get() { return *instance; }
 
 	Player* player;
 
 private:
 	bool bShowMenu = false;
-	
-	Level* menuLevel = nullptr;
+	bool bGameOver = false;
+
 	Level* craftLevel = nullptr;
+	Level* menuLevel = nullptr;
 	Level* backLevel = nullptr;
 	Level* battleScene = nullptr;
+	Level* gameOverLevel = nullptr;
 
 	vector<wstring> loseImage;
 	vector<wstring> winImage;
+	vector<wstring> runImage;
 private:
 	static Game* instance;
 };

@@ -6,6 +6,7 @@ enum class ItemType :unsigned short
 	Wood = 1,
 	Meat = 2,
 	Weapon = 3,
+	Medicine = 4,
 };
 
 
@@ -15,7 +16,7 @@ class Item : public DrawableActor
 {
 	RTTI_DECLARATIONS(Item, DrawableActor)
 public:
-	Item(const char* name);
+	Item(const char* name, Player* value=nullptr);
 	virtual ~Item();
 
 	virtual void Use() = 0;

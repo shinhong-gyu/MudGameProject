@@ -31,6 +31,7 @@ struct Selection
 class BattleScene : public Level
 {
 	RTTI_DECLARATIONS(BattleScene, Level)
+	friend class Game;
 
 public:
 	BattleScene();

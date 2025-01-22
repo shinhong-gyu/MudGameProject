@@ -1,6 +1,7 @@
 ﻿#include "Item.h"
 
-Item::Item(const char* name)
+Item::Item(const char* name, Player* value)
+	:owner(value)
 {
 	size_t length = strlen(name) + 1;
 
@@ -12,4 +13,5 @@ Item::Item(const char* name)
 Item::~Item()
 {
 	delete[] name;
+	delete owner;
 }
