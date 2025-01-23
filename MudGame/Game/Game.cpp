@@ -279,10 +279,10 @@ void Game::PrintLoseImage()
 	}
 	SetConsoleOutputCP(949);
 	SetColor(Color::Red);
-	cout << "곰과 싸워서 패배했다 (HP -3)\n\n";
+	cout << "\n\t    곰과 싸워서 패배했다 (HP -3)\n\n";
 
 	SetColor(Color::White);
-	cout << "ESC 눌러서 계속하기\n";
+	cout << "\t    ESC 눌러서 계속하기\n";
 }
 
 void Game::PrintWinImage()
@@ -300,10 +300,10 @@ void Game::PrintWinImage()
 	}
 	SetConsoleOutputCP(949);
 	SetColor(Color::Green);
-	cout << "곰과 싸워서 승리했다 (고기 +1)\n\n";
+	cout << "\n\t    곰과 싸워서 승리했다 (고기 +1)\n\n";
 
 	SetColor(Color::White);
-	cout << "ESC 눌러서 계속하기\n";
+	cout << "\t    ESC 눌러서 계속하기\n";
 }
 
 void Game::PrintRunImage()
@@ -321,10 +321,10 @@ void Game::PrintRunImage()
 	}
 	SetConsoleOutputCP(949);
 	SetColor(Color::Blue);
-	cout << "도망치는데 성공했다.\n\n";
+	cout << "\n\t       도망치는데 성공했다.\n\n";
 
 	SetColor(Color::White);
-	cout << "ESC 눌러서 계속하기\n";
+	cout << "\t       ESC 눌러서 계속하기\n";
 }
 
 void Game::GameOver()

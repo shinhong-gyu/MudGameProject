@@ -62,8 +62,6 @@ void BattleScene::Update(float deltaTime)
 {
 	timer->Update(deltaTime);
 
-	
-
 	weaponList = Game::Get().player->GetItemListByType(ItemType::Weapon);
 
 	if (Game::Get().GetKeyDown(VK_ESCAPE))
@@ -100,7 +98,7 @@ void BattleScene::Update(float deltaTime)
 
 	if (Game::Get().GetKeyDown(VK_RETURN))
 	{
-		if(bIsExpired) return;
+		if (bIsExpired) return;
 
 		if (bShowWeaponList)
 		{
@@ -158,11 +156,15 @@ void BattleScene::Draw()
 		return;
 	}
 
+	SetColor(Color::White);
+
+	Engine::Get().SetCursorPosition(22, 0);
+	cout << "곰을 만났다.";
+
 	SetConsoleOutputCP(CP_UTF8);
 
+	Engine::Get().SetCursorPosition(0, 1);
 	// 콘솔 화면 초기화
-	SetColor(Color::White);
-	Engine::Get().SetCursorPosition(0, 0);
 
 	for (const auto& line : images[0])
 	{

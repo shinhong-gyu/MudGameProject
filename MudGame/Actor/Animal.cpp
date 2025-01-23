@@ -1,7 +1,7 @@
 ﻿#include "Animal.h"
 
 Animal::Animal(const Vector2& position)
-	:DrawableActor("A")
+	:DrawableActor("@")
 {
 	this->position = position;
 

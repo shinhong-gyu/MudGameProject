@@ -37,7 +37,7 @@ public:
 	virtual void Update(float deltaTime) override;
 	virtual void Draw() override;
 
-	void TimerWork() {timer->bActive = true;}
+	void TimerWork() { timer->bActive = true; }
 
 private:
 	int currentIndex = 0;
@@ -48,6 +48,11 @@ private:
 	int length = 0;
 
 	Timer* timer = new Timer(3.0f);
+	Timer* animTimer = new Timer(0.05f);
 
 	bool bOnce = false;
-};
+
+	vector<vector<wstring>> frames;
+
+	int idx = 0;
+};	
