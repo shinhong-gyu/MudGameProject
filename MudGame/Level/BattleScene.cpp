@@ -40,7 +40,8 @@ BattleScene::BattleScene()
 		}
 		else
 		{
-			Game::Get().player->AddToInventory(new Meat("고 기", Game::Get().player), 1);
+			Item* newItem = new Meat("고 기", Game::Get().player);
+			Game::Get().player->AddToInventory(newItem, 1);
 			Game::Get().PrintWinImage();
 		}
 		}));
@@ -56,6 +57,24 @@ BattleScene::BattleScene()
 				battleL->bOnce = false;
 			}
 		}));
+}
+
+BattleScene::~BattleScene()
+{
+	for (auto selection : selections)
+	{
+		if (selection)
+		{
+			delete(selection);
+			selection = nullptr;
+		}
+	}
+
+	if (timer)
+	{
+		delete(timer);
+		timer = nullptr;
+	}
 }
 
 void BattleScene::Update(float deltaTime)

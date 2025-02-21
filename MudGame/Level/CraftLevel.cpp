@@ -65,7 +65,8 @@ CraftLevel::CraftLevel()
 			if (2 <= Game::Get().player->GetQuantity("목 재"))
 			{
 				Game::Get().player->RemoveFromInventory("목 재", 2);
-				Game::Get().player->AddToInventory(new Club(), 1);
+				Item* newItem = new Club();
+				Game::Get().player->AddToInventory(newItem, 1);
 				system("cls");
 				Log("\t나무 몽둥이 제작 성공 ! ");
 				
@@ -90,7 +91,8 @@ CraftLevel::CraftLevel()
 			if (4 <= Game::Get().player->GetQuantity("목 재"))
 			{
 				Game::Get().player->RemoveFromInventory("목 재", 4);
-				Game::Get().player->AddToInventory(new WoodSword(), 1);
+				Item* newItem = new WoodSword();
+				Game::Get().player->AddToInventory(newItem, 1);
 				system("cls");
 				Log("\t목검 제작 성공 ! ");
 				if (auto* cl = dynamic_cast<CraftLevel*>(Game::Get().GetCraftLevel()))

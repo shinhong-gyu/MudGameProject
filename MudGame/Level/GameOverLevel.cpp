@@ -197,7 +197,22 @@ GameOverLevel::~GameOverLevel()
 {
 	for (auto* item : menuItems)
 	{
-		delete item;
+		if (item)
+		{
+			delete item;
+			item = nullptr;
+		}
+	}
+
+	if (timer)
+	{
+		delete timer;
+		timer = nullptr;
+	}
+	if (animTimer)
+	{
+		delete animTimer;
+		animTimer = nullptr;
 	}
 }
 

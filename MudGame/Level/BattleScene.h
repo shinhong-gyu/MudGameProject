@@ -35,6 +35,8 @@ class BattleScene : public Level
 
 public:
 	BattleScene();
+	~BattleScene();
+
 	virtual void Update(float deltaTime) override;
 	virtual void Draw() override;
 private:

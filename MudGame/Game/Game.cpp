@@ -108,32 +108,35 @@ Game::Game()
 
 Game::~Game()
 {
-	if (bShowMenu)
+	if (battleScene)
 	{
+		delete battleScene;
+		battleScene = nullptr;
+	}
+
+	if (craftLevel)
+	{
+		delete craftLevel;
+		craftLevel = nullptr;
+	}
+
+	if (gameOverLevel)
+	{
+		delete gameOverLevel;
+		gameOverLevel = nullptr;
+	}
+
+	if (mainLevel)
+	{
+
+		delete mainLevel;
+		mainLevel = nullptr;
 		if (backLevel)
 		{
 			delete backLevel;
 			backLevel = nullptr;
-			mainLevel = nullptr;
 		}
 	}
-	else
-	{
-		if (!mainLevel->As<GameOverLevel>())
-		{
-			delete gameOverLevel;
-		}
-		delete mainLevel;
-		mainLevel = nullptr;
-	}
-
-	delete menuLevel;
-	delete craftLevel;
-	delete battleScene;
-	menuLevel = nullptr;
-	gameOverLevel = nullptr;
-	battleScene = nullptr;
-	craftLevel = nullptr;
 }
 
 void Game::InitGame()
@@ -193,12 +196,12 @@ void Game::ToggleMenu()
 
 	if (bShowMenu)
 	{
-		backLevel = mainLevel;
-		mainLevel = menuLevel;
+		backLevel = &*mainLevel;
+		mainLevel = &*menuLevel;
 	}
 	else
 	{
-		mainLevel = backLevel;
+		mainLevel = &*backLevel;
 	}
 
 	mainLevel->bIsMainLevel = true;
@@ -210,8 +213,8 @@ void Game::CraftMode()
 
 	mainLevel->bIsMainLevel = false;
 
-	backLevel = mainLevel;
-	mainLevel = craftLevel;
+	backLevel = &*mainLevel;
+	mainLevel = &*craftLevel;
 
 	mainLevel->bIsMainLevel = true;
 }
@@ -237,14 +240,14 @@ void Game::IntoBattleScene()
 
 	mainLevel->bIsMainLevel = false;
 
-	backLevel = mainLevel;
+	backLevel = &*mainLevel;
 
 	if (auto* bl = battleScene->As<BattleScene>())
 	{
 		bl->bIsExpired = false;
 	}
 
-	mainLevel = battleScene;
+	mainLevel = &*battleScene;
 
 	mainLevel->bIsMainLevel = true;
 }
@@ -259,7 +262,7 @@ void Game::BackToMainLevel()
 
 	if (backLevel->As<MainLevel>())
 	{
-		mainLevel = backLevel;
+		mainLevel = &*backLevel;
 	}
 	mainLevel->bIsMainLevel = true;
 }
@@ -330,8 +333,8 @@ void Game::PrintRunImage()
 void Game::GameOver()
 {
 	system("cls");
-	mainLevel = gameOverLevel;
-	backLevel = mainLevel;
+	mainLevel = &*gameOverLevel;
+	backLevel = &*mainLevel;
 
 	SetConsoleOutputCP(CP_UTF8);
 	wcout << L"⡿⣿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⢿⢿⡿⡿⣿⣻\n";
@@ -353,8 +356,8 @@ void Game::GameOver()
 void Game::AliveSuccess()
 {
 	system("cls");
-	mainLevel = gameOverLevel;
-	backLevel = mainLevel;
+	mainLevel = &*gameOverLevel;
+	backLevel = &*mainLevel;
 
 	SetConsoleOutputCP(CP_UTF8);
 
